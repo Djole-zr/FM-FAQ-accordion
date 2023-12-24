@@ -5,12 +5,23 @@
     --pale-purple: hsla(292, 16%, 49%, 1);
     --pink: hsla(281, 83%, 54%, 1);
   }
-  
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+button {
+    appearance: none;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    /* outline: none; */
 }
 
 html {
@@ -28,11 +39,8 @@ body {
     background-size: contain;
     
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+    display: grid;
+    place-content: center;
 }
 
 
@@ -48,7 +56,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    margin-bottom: 3.2rem;
+    margin-bottom: 0.8rem;
 }
 
 h1 {
@@ -92,7 +100,7 @@ h2:focus {
     display: none;
 }
 
-p[class="show"] {
+p.show {
     display: block;
 }
 
@@ -107,4 +115,43 @@ p[class="show"] {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+
+@media (max-width: 42em) {
+    body {
+        background-size: auto 28.6%;
+       
+    }
+    
+    .card {
+        width: 32.7rem;
+        padding: 2.4rem;
+        border-radius: 8px;
+    }
+    
+    .heading {
+        margin-bottom: 0.4rem;
+    }
+
+    h1 {
+        font-size: 3.2rem;
+    }
+
+    .heading img {
+        width: 2.4rem;
+    }
+
+    .question {
+        padding: 2rem 0;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .questions p {
+        font-size: 1.4rem;
+        padding-bottom: 2rem;
+    }
 }
